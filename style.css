@@ -164,3 +164,36 @@ header span {
    margin-top: 10px;
    padding-bottom: 10px;
 }
+
+/* MOBILE LAYOUT: keep the header readable and the IGN link compact. */
+@media (max-width: 600px) {
+  .site-header {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .site-mark {
+    margin-right: 0;
+    font-size: 26px;
+    flex-shrink: 0;
+  }
+
+  .site-label {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+  }
+
+  .site-edition {
+    display: none;
+  }
+
+  .guide-link {
+    max-width: 100%;
+  }
+
+  .guide-link-label,
+  .guide-link-main {
+    display: block;
+  }
+}
