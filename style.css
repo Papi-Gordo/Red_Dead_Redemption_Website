@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Chinese Rocks Rg";
+  src: url("./chinese_rocks/chinese rocks rg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #24201b;
+  --paper: #eee9dc;
+  --paper-light: #f6f2e9;
+  --red: #a62420;
+  --red-dark: #671b19;
+  --line: #cfc7b7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #d8d0c0;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, #f3eddd 0, transparent 50%),
+    radial-gradient(circle at 90% 85%, #c7bcaa 0, transparent 42%);
+  content: "";
+}
+
+.page-shell {
+  width: min(100%, 1440px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 clamp(18px, 4.4vw, 64px);
+  background: var(--paper);
+  box-shadow: 0 0 50px rgb(35 26 18 / 8%);
+}
+
+.site-header,
+.site-footer,
+.site-label,
+.site-edition,
+.eyebrow,
+.hero-bottom,
+.hero-art figcaption,
+.section-index,
+.section-number,
+.guide-link-label,
+.guide-link-main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  min-height: 82px;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* COURSE REQUIREMENT: Class Selector
+   Applies styling to the RDR II logo.
+   This color overrides the general header span color. */
+
+.site-mark {
+  margin-right: 25px;
+  color: var(--red);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.site-label,
+.site-edition {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.site-edition {
+  margin-left: auto;
+  color: #756d60;
+  font-weight: 300;
+}
+
+.site-edition span {
+  color: var(--red);
+}
+
+/* COURSE REQUIREMENT: Element Selector
+   Applies the Chinese Rocks font to all six heading levels. */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Chinese Rocks Rg", Georgia, serif;
+  color: var(--ink);
+}
+
+/* COURSE REQUIREMENT: Element and Descendant Selectors
+   Applies the default ink color to spans inside the header. */
+
+header span {
+  color: var(--ink);
+}
+
+#rr-logo {
+  color: var(--red-dark);
+}
+
+/* COURSE REQUIREMENT: Contextual Selector
+   Applies bold styling only when .site-mark appears
+   inside an element with the .site-header class. */
+
+.site-header .site-mark {
+  font-weight: 900;
+}
+
+#page-title {
+  margin-top: 30px;
+}
+
+.hero-art {
+  margin: 30px auto;
+  padding: 20px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.hero-art img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.activities-flourish {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 18px;
+  letter-spacing: 5px;
+  margin: 20px 0;
+}
+
+.guide-link {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.site-footer {
+   margin-top: 10px;
+   padding-bottom: 10px;
+}
